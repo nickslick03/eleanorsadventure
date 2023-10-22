@@ -47,7 +47,7 @@ export const End = () => {
                 "background-image":  `url(${background})`,
             }} 
             class="w-screen h-screen absolute top-0 left-0 invisible
-            flex justify-center items-center [&>img]:h-[64px]">
+            flex justify-center items-center [&>img]:h-[64px] overflow-hidden">
                 <img 
                     class="relative translate-y-1/2 -bottom-1/2 transition-all duration-[6s] ease-in-out" 
                     ref={eleanorImg} 
