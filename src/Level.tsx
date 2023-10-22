@@ -68,7 +68,7 @@ export const Level = (props: {
 
     return (
         <Modal visible={props.visible}>
-            <div class="h-full flex flex-col items-center justify-between pb-4">
+            <div class="h-full flex flex-col items-center justify-between">
                 <h1 class="text-4xl">
                     Level {props.selectedLevel() + 1}
                 </h1>
@@ -90,6 +90,7 @@ export const Level = (props: {
                     </div>
                 </Show>
                 <div 
+                    class="mb-4"
                     classList={{
                         invisible: props.selectedLevel() !== props.currLevel()
                     }}
