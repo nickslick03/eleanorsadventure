@@ -114,7 +114,7 @@ export const Game = () => {
                 "background-image":  `url(${background})`,
             }} 
             class="flex flex-col pt-8">
-            <div class="grow px-4">
+            <div class="grow px-4 overflow-y-scroll">
                 <div class="relative grid grid-cols-4">
                     <For each={cellType}>
                     {(type) => 
