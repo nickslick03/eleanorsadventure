@@ -5,31 +5,31 @@ import nick from './assets/nick.png';
 
 export const End = () => {
 
-    let blackDiv: HTMLDivElement;
-    let backgroundDiv: HTMLDivElement;
-    let eleanorImg: HTMLImageElement;
-    let messageDiv: HTMLDivElement;
+    let blackDiv: HTMLDivElement | undefined;
+    let backgroundDiv: HTMLDivElement | undefined;
+    let eleanorImg: HTMLImageElement | undefined;
+    let messageDiv: HTMLDivElement | undefined;
     
     const [seconds, setSeconds] = createSignal(0);
 
     const ID = setInterval(() => setSeconds(s => s + 1), 1000);
 
-    setTimeout(() => blackDiv.style.opacity = '1', 5);
+    setTimeout(() => blackDiv!.style.opacity = '1', 5);
 
     createEffect(() => { 
         switch(seconds()) {
             case 3: 
             {
-                blackDiv.style.opacity = '0';
-                backgroundDiv.style.visibility = 'visible';
+                blackDiv!.style.opacity = '0';
+                backgroundDiv!.style.visibility = 'visible';
             }
             break;
             case 6:
-                eleanorImg.style.bottom = '0';
+                eleanorImg!.style.bottom = '0';
             break;
             case 12:
                 {
-                    messageDiv.style.opacity = '1';
+                    messageDiv!.style.opacity = '1';
                     clearInterval(ID);
                 }
             break;
