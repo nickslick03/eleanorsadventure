@@ -57,7 +57,7 @@ export const Level = (props: {
     let input: HTMLInputElement | undefined;
     
     const checkPassword = () => {
-        if (input?.value === levelData[props.selectedLevel()].password) {
+        if (input?.value.toLowerCase() === levelData[props.selectedLevel()].password) {
             alert('You got it!');
             props.nextLevel();
             props.visible[1](false);

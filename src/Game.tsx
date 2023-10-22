@@ -114,7 +114,7 @@ export const Game = () => {
                 "background-image":  `url(${background})`,
             }} 
             class="flex flex-col pt-8">
-            <div class="grow px-4 overflow-y-scroll">
+            <div class="grow px-4 overflow-y-scroll pb-4">
                 <div class="relative grid grid-cols-4">
                     <For each={cellType}>
                     {(type) => 
@@ -152,7 +152,7 @@ export const Game = () => {
             </div>
             <nav class="flex justify-around items-end bg-white pb-4 pt-2">
                     <button onClick={() => showInstructions[1](true)}>
-                        <div class="text-2xl">🧾</div>
+                        <div class="text-2xl">📜</div>
                         <div class="text-sm">Instructions</div>
                     </button>
                     <button onclick={() => showCurrLevel()}>
